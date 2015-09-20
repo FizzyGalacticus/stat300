@@ -1,3 +1,7 @@
+##################
+#	Problem 48   #
+##################
+
 #Read in data for problem #48
 data = read.table("0148.txt", sep=",", header=TRUE)
 
@@ -29,4 +33,3 @@ vars = c(var(u1),var(u2),var(f1),var(f2),var(u),var(f),var(endotoxin))
 jpeg("plot.jpg")
 boxplot(u1,u2,f1,f2, horizontal=TRUE, range=max(endotoxin), xlab="Endotoxin Levels")
 dev.off()
-
