@@ -24,3 +24,21 @@ IQRs = c(IQR(u1),IQR(u2),IQR(f1),IQR(f2),IQR(u),IQR(f),IQR(endotoxin))
 
 #Calculate variance
 vars = c(var(u1),var(u2),var(f1),var(f2),var(u),var(f),var(endotoxin))
+
+#Generate box plots for u1, u2, f1, and f2
+jpeg("u1plot.jpg")
+boxplot(u1, horizontal=TRUE, range=max(u1), xlab="U1 Endotoxin Levels")
+dev.off()
+
+jpeg("u2plot.jpg")
+boxplot(u2, horizontal=TRUE, range=max(u2), xlab="U2 Endotoxin Levels")
+dev.off()
+
+jpeg("f1plot.jpg")
+boxplot(f1, horizontal=TRUE, range=max(f1), xlab="F1 Endotoxin Levels")
+dev.off()
+
+jpeg("f2plot.jpg")
+boxplot(f2, horizontal=TRUE, range=max(f2), xlab="F2 Endotoxin Levels")
+dev.off()
+
